@@ -293,5 +293,33 @@ document.addEventListener('contextmenu', function(e) {
 // CONSOLE MESSAGE
 // ===============================================
 console.log('%c💕 XV Años de Jade Ramos 💕', 'color: #c41e3a; font-size: 24px; font-weight: bold;');
-console.log('%c14 de Febrero, 2025', 'color: #ff69b4; font-size: 16px;');
+console.log('%c14 de Febrero, 2026', 'color: #ff69b4; font-size: 16px;');
 console.log('%cProducciones Foro 7', 'color: #666; font-size: 12px;');
+
+// ===============================================
+// SAFE STORAGE ACCESS (Evitar errores de Tracking Prevention)
+// ===============================================
+window.safeLocalStorage = {
+    getItem: function(key) {
+        try {
+            return localStorage.getItem(key);
+        } catch (e) {
+            console.warn('LocalStorage blocked:', e);
+            return null;
+        }
+    },
+    setItem: function(key, value) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {
+            console.warn('LocalStorage blocked:', e);
+        }
+    },
+    removeItem: function(key) {
+        try {
+            localStorage.removeItem(key);
+        } catch (e) {
+            console.warn('LocalStorage blocked:', e);
+        }
+    }
+};
