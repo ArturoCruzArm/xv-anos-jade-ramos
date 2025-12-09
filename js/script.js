@@ -104,8 +104,8 @@ function initParticles() {
 // COUNTDOWN TIMER
 // ===============================================
 function initCountdown() {
-    // Fecha del evento: 14 de Febrero, 2025 a las 17:00 (5:00 PM) - Zona horaria de México Central
-    const eventDate = new Date('2025-02-14T17:00:00-06:00').getTime();
+    // Fecha del evento: 14 de Febrero, 2026 a las 17:00 (5:00 PM) - Zona horaria de México Central
+    const eventDate = new Date('2026-02-14T17:00:00-06:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
