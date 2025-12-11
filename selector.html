@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Fotos - XV Años de Jade Ramos | Foro 7</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbcfe8 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbcfe8 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            background: white;
+            color: #ec4899;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links a.active {
+            background: #db2777;
+            color: white;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .coming-soon {
+            padding: 60px 20px;
+        }
+
+        .coming-soon h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #ec4899;
+            margin-bottom: 20px;
+        }
+
+        .coming-soon p {
+            font-size: 1.2em;
+            color: #666;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .date-box {
+            background: linear-gradient(135deg, #ec4899 0%, #fbcfe8 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 500px;
+        }
+
+        .date-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .date-box p {
+            font-size: 1.3em;
+            color: white;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #ec4899;
+        }
+
+        .instructions h3 {
+            color: #ec4899;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .instructions ul {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+            list-style-position: inside;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .footer .company-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2em;
+            }
+
+            .coming-soon h2 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">💕 Selector de Fotos</h1>
+            <h2 class="subtitle">XV Años de Jade Ramos</h2>
+
+            <div class="nav-links">
+                <a href="index.html">Invitación</a>
+                <a href="contrato.html">Contrato</a>
+                <a href="logistica.html">Logística</a>
+                <a href="selector.html" class="active">Selector de Fotos</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="coming-soon">
+                <h2>📸 Próximamente Disponible</h2>
+                <p>El selector de fotos estará disponible después de la sesión fotográfica previa.</p>
+
+                <div class="date-box">
+                    <h3>📅 Sesión Fotográfica</h3>
+                    <p>Martes 9 de Diciembre, 2025</p>
+                    <p style="font-size: 1.1em; margin-top: 10px;">4:00 PM</p>
+                </div>
+
+                <p>Una vez realizada la sesión, podrás ver todas las fotografías aquí y seleccionar:</p>
+
+                <div class="instructions">
+                    <h3>¿Qué podrás hacer con el selector?</h3>
+                    <ul>
+                        <li>Ver todas las fotos de la sesión previa</li>
+                        <li>Seleccionar las <strong>200 fotos</strong> que deseas imprimir</li>
+                        <li>Elegir la foto para la <strong>ampliación de 20x24 pulgadas</strong></li>
+                        <li>Marcar fotos para <strong>redes sociales</strong></li>
+                        <li>Indicar fotos para la <strong>invitación web</strong></li>
+                        <li>Filtrar por categorías y tipos de foto</li>
+                        <li>Descargar un reporte de tu selección</li>
+                    </ul>
+                </div>
+
+                <div class="instructions">
+                    <h3>📝 Instrucciones Importantes</h3>
+                    <ul>
+                        <li><strong>Revisa con calma:</strong> Tendrás tiempo para revisar todas las fotos</li>
+                        <li><strong>Límite de 200 fotos:</strong> Recuerda que el paquete incluye 200 fotos impresas</li>
+                        <li><strong>Una ampliación:</strong> Selecciona la foto más especial para ampliar</li>
+                        <li><strong>Guarda tu selección:</strong> El sistema guardará tu progreso automáticamente</li>
+                        <li><strong>Confirma antes de enviar:</strong> Revisa todo antes de enviar tu selección final</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: 30px; color: #ec4899; font-weight: 600; font-size: 1.1em;">
+                    ¡Nos vemos el 9 de diciembre para crear recuerdos inolvidables! 💕
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="company-name">Producciones Foro 7</p>
+            <p>Fotografía, Video, Dron e Invitaciones Web</p>
+            <p>📱 Contacto: 477-920-3776</p>
+        </div>
+    </div>
+</body>
+</html>

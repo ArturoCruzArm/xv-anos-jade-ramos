@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logística del Evento - XV Años de Jade Ramos | Foro 7</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbcfe8 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .logistics-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbcfe8 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            background: white;
+            color: #ec4899;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links a.active {
+            background: #db2777;
+            color: white;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #ec4899, #fbcfe8);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 100px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 38px;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #ec4899;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #ec4899;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background: #ec4899;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ec4899;
+        }
+
+        .timeline-content h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .timeline-content p {
+            color: #666;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .timeline-content ul {
+            margin-top: 10px;
+            margin-left: 20px;
+            color: #666;
+        }
+
+        .timeline-content li {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .location-card {
+            background: white;
+            border: 2px solid #ec4899;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .location-card h4 {
+            color: #ec4899;
+            margin-bottom: 10px;
+        }
+
+        .location-card a {
+            display: inline-block;
+            background: #ec4899;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .location-card a:hover {
+            background: #db2777;
+            transform: translateX(5px);
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .section h2 {
+            color: #ec4899;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #fbcfe8;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #ec4899 0%, #fbcfe8 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-box h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+            border: 2px solid #ec4899;
+        }
+
+        .contact-section h3 {
+            color: #ec4899;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .contact-info {
+            font-size: 1.2em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #ec4899;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .important-note h4 {
+            color: #856404;
+            margin-bottom: 8px;
+        }
+
+        .important-note p {
+            color: #856404;
+            margin: 5px 0;
+        }
+
+        .equipment-section {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+
+        .equipment-section h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+
+        .equipment-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .equipment-section li {
+            padding: 8px 0;
+            color: #1565c0;
+            font-weight: 500;
+        }
+
+        .equipment-section li:before {
+            content: "📷 ";
+            margin-right: 8px;
+        }
+
+        .coordination-box {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #9c27b0;
+        }
+
+        .coordination-box h3 {
+            color: #7b1fa2;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .timeline-item {
+                padding-left: 80px;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item::before {
+                left: 18px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .footer .company-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="logistics-container">
+        <div class="header">
+            <h1>💕 Logística del Evento</h1>
+            <p>XV Años de Jade Ramos</p>
+            <p style="font-size: 1em; margin-top: 10px;">Viernes 14 de febrero de 2026 💝</p>
+
+            <div class="nav-links">
+                <a href="index.html">Invitación</a>
+                <a href="contrato.html">Contrato</a>
+                <a href="logistica.html" class="active">Logística</a>
+                <a href="selector.html">Selector de Fotos</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="section">
+                <h2>📍 Información General del Evento</h2>
+
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>📅 Fecha</h3>
+                        <p>Viernes</p>
+                        <p>14 Febrero 2026</p>
+                        <p style="font-size: 0.9em;">💝 San Valentín</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>📸 Sesión Previa</h3>
+                        <p>9 Diciembre</p>
+                        <p style="font-size: 0.9em;">4:00 PM</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>⛪ Ceremonia</h3>
+                        <p>6:00 PM</p>
+                        <p style="font-size: 0.9em;">Misa</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>🎉 Recepción</h3>
+                        <p>7:30 PM</p>
+                        <p style="font-size: 0.9em;">Fiesta</p>
+                    </div>
+                </div>
+
+                <div class="important-note">
+                    <h4>⚠️ Importante para Jade y la Familia</h4>
+                    <p><strong>• Sesión previa confirmada:</strong> Martes 9 de diciembre, 4:00 PM</p>
+                    <p><strong>• Día del evento:</strong> Cobertura completa desde preparativos hasta las 4:00 AM</p>
+                    <p><strong>• Equipo completo:</strong> Fotógrafo, videógrafo y operador de dron</p>
+                    <p><strong>• Respaldo continuo:</strong> Todas las fotos y videos se respaldan durante el evento</p>
+                    <p><strong>• Coordinación:</strong> Comunicación constante vía WhatsApp</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📸 Sesión Fotográfica Previa</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time-badge">Martes 9 Diciembre - 4:00 PM</span>
+                        <div class="timeline-content">
+                            <h3>📷 Sesión Previa en Exteriores</h3>
+                            <p><strong>Duración:</strong> Aproximadamente 2-3 horas</p>
+                            <p style="margin-top: 10px;"><strong>Locaciones:</strong></p>
+                            <ul>
+                                <li><strong>Primera locación:</strong> Templo Expiatorio del Sagrado Corazón de Jesús</li>
+                                <li><strong>Segunda locación:</strong> Forum Cultural Guanajuato</li>
+                            </ul>
+                            <p style="margin-top: 10px;"><strong>Recomendaciones para Jade:</strong></p>
+                            <ul>
+                                <li>Llegar con maquillaje terminado (rostro despejado, sin cabello que tape el perfil)</li>
+                                <li>Traer labial extra para retoques</li>
+                                <li>Vestido de sesión previa planchado</li>
+                                <li>Zapatos cómodos para caminar entre locaciones</li>
+                                <li>Actitud relajada y disfrutar el momento</li>
+                            </ul>
+                            <div class="important-note" style="margin-top: 15px;">
+                                <h4>💄 Indicaciones para Maquillaje</h4>
+                                <p>• Dejar el rostro lo más libre posible sin cabello que tape distintos perfiles</p>
+                                <p>• Traer labial adicional ya que con la comida se despinta</p>
+                                <p>• Maquillaje natural que fotografíe bien con luz natural</p>
+                            </div>
+                            <div class="location-card">
+                                <h4>📍 Punto de Encuentro</h4>
+                                <p>Templo Expiatorio del Sagrado Corazón de Jesús</p>
+                                <p style="font-size: 0.9em; color: #666; margin-top: 5px;">Escaleras principales - Entrada por puerta principal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>⏰ Cronograma del Día del Evento - 14 de Febrero</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="time-badge">4:00 PM</span>
+                        <div class="timeline-content">
+                            <h3>🏠 Preparativos en Casa</h3>
+                            <p><strong>Duración:</strong> 4:00 PM - 5:30 PM (1 hora 30 minutos)</p>
+                            <p style="margin-top: 10px;"><strong>Actividades a capturar:</strong></p>
+                            <ul>
+                                <li>Llegada del equipo de Foro 7 (foto + video)</li>
+                                <li>Últimos detalles del arreglo personal</li>
+                                <li>Vestido, zapatos y accesorios de la quinceañera</li>
+                                <li>Momentos con las mamás y familia</li>
+                                <li>Fotos de detalle del vestido y accesorios</li>
+                                <li>Video de preparativos para el videoclip</li>
+                                <li>Momentos previos a la salida</li>
+                            </ul>
+                            <div class="coordination-box" style="margin-top: 15px;">
+                                <h3>🎯 Coordinación Fotógrafo-Videógrafo-Quinceañera</h3>
+                                <p><strong>Fotógrafo:</strong> Captará detalles, momentos candid y fotos posadas</p>
+                                <p><strong>Videógrafo:</strong> Grabará secuencias de preparativos y entrevistas breves</p>
+                                <p><strong>Jade:</strong> Actuar con naturalidad, el equipo se adaptará a ti</p>
+                                <p style="margin-top: 10px; color: #7b1fa2; font-weight: 600;">
+                                    💡 Tip: No mirar directamente a la cámara a menos que se indique
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-badge">5:30 PM</span>
+                        <div class="timeline-content">
+                            <h3>🚗 Traslado a la Iglesia</h3>
+                            <p><strong>Salida de casa:</strong> 5:30 PM</p>
+                            <p><strong>Llegada a iglesia:</strong> 5:45 PM (con tiempo para acomodarse)</p>
+                            <p style="margin-top: 10px;"><strong>Durante el traslado:</strong></p>
+                            <ul>
+                                <li>El equipo de Foro 7 llegará a la iglesia antes para preparar equipo</li>
+                                <li>Se prepararán ángulos de video para la llegada</li>
+                                <li>Posible toma con dron de llegada (si las condiciones lo permiten)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-badge">6:00 PM</span>
+                        <div class="timeline-content">
+                            <h3>⛪ Ceremonia Religiosa</h3>
+                            <p><strong>Duración estimada:</strong> 6:00 PM - 7:00 PM (1 hora)</p>
+                            <p style="margin-top: 10px;"><strong>Cobertura incluye:</strong></p>
+                            <ul>
+                                <li>Llegada de invitados (desde 5:50 PM)</li>
+                                <li>Entrada de chambelanes y damas</li>
+                                <li>Entrada triunfal de la quinceañera (6:00 PM)</li>
+                                <li>Ceremonia religiosa completa</li>
+                                <li>Momento de la bendición</li>
+                                <li>Entrega de regalos simbólicos</li>
+                                <li>Salida de la quinceañera y corte</li>
+                                <li>Fotos con familia e invitados (7:00 PM - 7:20 PM)</li>
+                            </ul>
+                            <div class="coordination-box" style="margin-top: 15px;">
+                                <h3>🎬 Cobertura Foto + Video en Iglesia</h3>
+                                <p><strong>Fotógrafo:</strong> Posicionado para captar entrada, altar y momentos clave</p>
+                                <p><strong>Videógrafo:</strong> Grabación continua en 4K, audio con micrófono direccional</p>
+                                <p><strong>Importante:</strong> Respetar indicaciones del sacerdote sobre movimiento durante misa</p>
+                            </div>
+                            <div class="location-card">
+                                <h4>📍 Ubicación</h4>
+                                <p>Parroquia Señor de las Hilamas</p>
+                                <p style="font-size: 0.9em; color: #666;">Sierra de San Pedro 166C, Las Hilamas, León, Gto.</p>
+                                <a href="https://maps.app.goo.gl/yuGKz9UDkFZkYkEk6" target="_blank">📍 Ver en Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-badge">7:00 PM - 7:20 PM</span>
+                        <div class="timeline-content">
+                            <h3>📸 Sesión de Fotos Post-Ceremonia</h3>
+                            <p><strong>Duración:</strong> 20 minutos</p>
+                            <p style="margin-top: 10px;"><strong>Fotos a capturar:</strong></p>
+                            <ul>
+                                <li>Fotos con familia completa</li>
+                                <li>Fotos con chambelanes y damas</li>
+                                <li>Fotos con padrinos</li>
+                                <li>Foto grupal con todos los invitados</li>
+                                <li>Fotos en exteriores de la iglesia</li>
+                            </ul>
+                            <p style="margin-top: 10px; color: #ec4899; font-weight: 600;">
+                                ⚠️ Importante: Ser puntuales para llegar a tiempo a la recepción
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-badge">7:20 PM</span>
+                        <div class="timeline-content">
+                            <h3>🚗 Traslado al Salón de Recepción</h3>
+                            <p><strong>Salida de iglesia:</strong> 7:20 PM</p>
+                            <p><strong>Llegada al salón:</strong> 7:30 PM</p>
+                            <p style="margin-top: 10px;">El equipo de Foro 7 llegará primero para preparar:</p>
+                            <ul>
+                                <li>Pantalla digital con fotos de la sesión previa</li>
+                                <li>Caballete con ampliación</li>
+                                <li>Equipo de foto y video para entrada triunfal</li>
+                                <li>Posible toma con dron exterior del salón</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-badge">7:30 PM</span>
+                        <div class="timeline-content">
+                            <h3>🎉 Recepción y Fiesta</h3>
+                            <p><strong>Inicio:</strong> 7:30 PM</p>
+                            <p><strong>Cobertura continua hasta:</strong> 4:00 AM</p>
+                            <p style="margin-top: 10px;"><strong>Momentos clave a capturar:</strong></p>
+                            <ul>
+                                <li><strong>7:30 PM:</strong> Recepción de invitados</li>
+                                <li><strong>8:00 PM:</strong> Entrada triunfal de Jade</li>
+                                <li><strong>8:15 PM:</strong> Primer vals</li>
+                                <li><strong>8:30 PM:</strong> Vals con chambelanes</li>
+                                <li><strong>8:45 PM:</strong> Cambio de zapatos / Corona</li>
+                                <li><strong>9:00 PM:</strong> Brindis oficial</li>
+                                <li><strong>9:15 PM:</strong> Cena</li>
+                                <li><strong>10:00 PM:</strong> Corte de pastel</li>
+                                <li><strong>10:30 PM:</strong> Vals con papás/padrinos</li>
+                                <li><strong>11:00 PM:</strong> Baile libre y fiesta</li>
+                                <li><strong>12:00 AM:</strong> Lanzamiento de ramo</li>
+                                <li><strong>2:00 AM - 4:00 AM:</strong> Banda en vivo</li>
+                                <li><strong>4:00 AM:</strong> Despedida y cierre</li>
+                            </ul>
+                            <div class="important-note" style="margin-top: 15px;">
+                                <h4>📹 Nota sobre la cobertura de 8.5 horas</h4>
+                                <p>La cobertura de video será continua capturando todos los eventos principales.</p>
+                                <p style="margin-top: 8px;">El video final tendrá una duración de 4 horas, editado profesionalmente con música y títulos.</p>
+                                <p style="margin-top: 8px;">Se capturarán todos los momentos mencionados + momentos candid y sorpresas espontáneas.</p>
+                            </div>
+                            <div class="location-card">
+                                <h4>📍 Ubicación</h4>
+                                <p>Salón Extravaganza</p>
+                                <p style="font-size: 0.9em; color: #666;">Blvr. Mariano Escobedo Pte. 4821, Cd Satélite, León, Gto.</p>
+                                <a href="https://maps.app.goo.gl/b8NxpqVRHtE5fv3YA" target="_blank">📍 Ver en Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="important-note" style="margin-top: 30px;">
+                    <h4>📋 Resumen de Horarios del Día del Evento</h4>
+                    <p><strong>4:00 PM</strong> - Llegada del equipo a casa (preparativos)</p>
+                    <p><strong>5:30 PM</strong> - Salida hacia la iglesia</p>
+                    <p><strong>6:00 PM</strong> - Ceremonia religiosa</p>
+                    <p><strong>7:00 PM - 7:20 PM</strong> - Fotos después de la ceremonia</p>
+                    <p><strong>7:30 PM</strong> - Inicio de la recepción y fiesta</p>
+                    <p><strong>2:00 AM - 4:00 AM</strong> - Banda en vivo</p>
+                    <p><strong>4:00 AM</strong> - Cierre del evento</p>
+                    <p style="margin-top: 10px; color: #ec4899; font-weight: 600;">
+                        ⏰ Duración total de cobertura: 12 horas (4:00 PM - 4:00 AM)
+                    </p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📸 Equipo y Procedimientos</h2>
+
+                <div class="equipment-section">
+                    <h3>Equipo de Fotografía</h3>
+                    <ul>
+                        <li>Cámara profesional con lentes de alta calidad</li>
+                        <li>Flash externo para interiores y eventos nocturnos</li>
+                        <li>Baterías de respaldo completamente cargadas</li>
+                        <li>Tarjetas de memoria con amplio almacenamiento</li>
+                        <li>Respaldo inmediato de todas las fotos</li>
+                        <li>Equipo para iluminación de retratos</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #1565c0;"><strong>Entrega:</strong> 200 fotografías impresas en tamaño 5x7" + 1 ampliación 20x24" con marco + todas las fotos digitales editadas</p>
+                </div>
+
+                <div class="equipment-section">
+                    <h3>Equipo de Video</h3>
+                    <ul>
+                        <li>Videocámara 4K profesional</li>
+                        <li>Micrófono direccional para audio claro</li>
+                        <li>Estabilizador para tomas suaves</li>
+                        <li>Iluminación portátil LED</li>
+                        <li>Baterías adicionales y respaldos</li>
+                        <li>Monopod para tomas dinámicas</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #1565c0;"><strong>Entrega:</strong> Película de 4 horas en formato 4K, editada profesionalmente, musicalizada y titulada en USB con caja personalizada</p>
+                </div>
+
+                <div class="equipment-section">
+                    <h3>Equipo de Dron</h3>
+                    <ul>
+                        <li>Dron profesional con cámara 4K</li>
+                        <li>Tomas aéreas de locaciones (iglesia y salón)</li>
+                        <li>Video aéreo de entrada/salida de eventos</li>
+                        <li>Fotos panorámicas desde altura</li>
+                        <li>Operación con permisos y seguros correspondientes</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #1565c0;"><strong>Nota:</strong> Las tomas con dron se realizarán en momentos estratégicos y siempre respetando el espacio del evento y la seguridad de los invitados</p>
+                </div>
+
+                <div class="equipment-section">
+                    <h3>Equipo Prestado para el Evento</h3>
+                    <ul>
+                        <li><strong>Caballete profesional</strong> para exhibir la ampliación de 20x24"</li>
+                        <li><strong>Pantalla digital con marco</strong> con presentación de fotos de la sesión previa</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #d32f2f;"><strong>Importante:</strong> El equipo prestado debe ser devuelto en las mismas condiciones al finalizar el evento. La familia es responsable de su cuidado durante la celebración.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>📋 Indicaciones para Jade y la Familia</h2>
+
+                <div class="timeline-content">
+                    <h3>Antes del Evento</h3>
+                    <ul>
+                        <li><strong>Confirmar horarios finales:</strong> Avisar con anticipación cualquier cambio</li>
+                        <li><strong>Lista de fotos especiales:</strong> Enviar lista de fotos que no pueden faltar (familia, grupos específicos)</li>
+                        <li><strong>Lista de invitados VIP:</strong> Indicar personas importantes para fotos prioritarias</li>
+                        <li><strong>Acceso libre:</strong> Asegurar que fotógrafo y videógrafo tengan acceso a todas las áreas</li>
+                        <li><strong>Persona de contacto:</strong> Designar a alguien que coordine el día del evento</li>
+                        <li><strong>Timeline de eventos:</strong> Compartir orden de eventos con coordinador/DJ</li>
+                        <li><strong>Confirmación sesión previa:</strong> Confirmar 2 días antes (7 de diciembre)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-content" style="margin-top: 20px;">
+                    <h3>Durante el Evento</h3>
+                    <ul>
+                        <li><strong>Naturalidad ante la cámara:</strong> Actuar con naturalidad, el equipo se adaptará</li>
+                        <li><strong>No mirar a cámara:</strong> A menos que se indique para fotos posadas</li>
+                        <li><strong>Avisar momentos especiales:</strong> Informar sobre sorpresas o momentos planificados</li>
+                        <li><strong>Fotos familiares:</strong> Coordinar con fotógrafo el momento de fotos grupales</li>
+                        <li><strong>Paciencia:</strong> Las mejores fotos requieren tiempo y ajustes</li>
+                        <li><strong>Disfrutar:</strong> La mejor foto es cuando Jade está disfrutando su fiesta</li>
+                        <li><strong>Comunicación:</strong> WhatsApp disponible todo el evento para coordinación</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-content" style="margin-top: 20px;">
+                    <h3>Después del Evento</h3>
+                    <ul>
+                        <li><strong>Entrega de fotos digitales:</strong> 2-3 semanas vía galería online</li>
+                        <li><strong>Selección de 200 fotos:</strong> Revisar galería y seleccionar las 200 para impresión</li>
+                        <li><strong>Revisión del video:</strong> Se enviará preview del video para aprobación</li>
+                        <li><strong>Aprobación final:</strong> Confirmar que todo está correcto</li>
+                        <li><strong>Material físico:</strong> Se entregará 4-6 semanas después de la selección</li>
+                        <li><strong>Entrega incluye:</strong> 200 fotos en caja de madera + ampliación con marco + USB en caja personalizada</li>
+                        <li><strong>Respaldo en redes:</strong> Video subido a YouTube y fotos compartidas en Facebook</li>
+                        <li><strong>Devolución de equipo:</strong> Caballete y pantalla digital al finalizar el evento</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>💡 Consejos Profesionales para Jade</h2>
+
+                <div class="coordination-box">
+                    <h3>📸 Para las Mejores Fotos</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0;">✨ <strong>Relájate y disfruta:</strong> Las mejores fotos salen cuando estás natural</li>
+                        <li style="padding: 8px 0;">💃 <strong>Muévete con confianza:</strong> No tengas miedo de bailar y divertirte</li>
+                        <li style="padding: 8px 0;">😊 <strong>Sonríe genuinamente:</strong> La alegría se nota en las fotos</li>
+                        <li style="padding: 8px 0;">👗 <strong>Cuida tu postura:</strong> Espalda recta, hombros relajados</li>
+                        <li style="padding: 8px 0;">💄 <strong>Retoca maquillaje:</strong> Cada 2-3 horas, especialmente labial</li>
+                        <li style="padding: 8px 0;">👠 <strong>Zapatos de repuesto:</strong> Considera zapatos cómodos para bailar</li>
+                        <li style="padding: 8px 0;">📱 <strong>Desconéctate:</strong> Evita estar en el celular durante momentos importantes</li>
+                        <li style="padding: 8px 0;">🎬 <strong>Ignora las cámaras:</strong> Actúa como si no estuvieran ahí</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="contact-section">
+                <h3>📱 Contacto - Foro 7</h3>
+                <p class="contact-info">
+                    WhatsApp: <a href="https://wa.me/5214779203776">477-920-3776</a>
+                </p>
+                <p class="contact-info">
+                    Arturo Cruz
+                </p>
+                <p style="margin-top: 15px; color: #666; font-size: 0.95em;">
+                    Disponible 24/7 para cualquier consulta o coordinación
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="company-name">Producciones Foro 7</p>
+            <p>Fotografía, Video, Dron e Invitaciones Web</p>
+            <p>📱 Contacto: 477-920-3776</p>
+        </div>
+    </div>
+</body>
+</html>
