@@ -269,10 +269,14 @@ section {
 }
 
 .event-details .container {
+    max-width: 1200px;
+}
+
+.events-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    align-items: start;
 }
 
 .detail-card {
@@ -287,10 +291,6 @@ section {
 .detail-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-strong);
-}
-
-.detail-card.single-event {
-    max-width: 100%;
 }
 
 .icon-svg {

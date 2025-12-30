@@ -103,33 +103,67 @@
     <!-- Información del evento -->
     <section class="event-details">
         <div class="container">
-            <div class="detail-card single-event" data-aos="fade-up" data-aos-duration="800">
-                <div class="icon-svg">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
+            <div class="events-grid">
+                <!-- Ceremonia Religiosa -->
+                <div class="detail-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="icon-svg">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l1.09 3.26L16 6.27l-2.5 2.43.59 3.44L12 10.77l-2.09 1.37.59-3.44L8 6.27l2.91-.01L12 2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-7 9h14v2H5v-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Ceremonia Religiosa</h3>
+                    <p class="venue-name">Parroquia Señor de las Hilamas</p>
+                    <p class="venue-address">Sierra de San Pedro 166C</p>
+                    <p class="venue-address">Las Hilamas, León, Gto.</p>
+                    <p class="time">⛪ 6:00 PM ⛪</p>
+                    <a href="https://maps.app.goo.gl/VbU3gdbEaWpRoD3a6" target="_blank" class="map-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="map-icon">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        Ver en el mapa
+                    </a>
+                    <div class="map-embed" data-aos="zoom-in" data-aos-delay="300">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.147138611372!2d-101.72874892474124!3d21.10669928056217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bc066da8e4793%3A0x2afef66858110f04!2sParroquia%20Se%C3%B1or%20de%20las%20Hilamas!5e0!3m2!1ses-419!2smx!4v1767114397877!5m2!1ses-419!2smx"
+                            width="100%"
+                            height="300"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
-                <h3>Recepción</h3>
-                <p class="venue-name">Salón Extravaganza</p>
-                <p class="venue-address">Blvr. Mariano Escobedo Pte. 4821</p>
-                <p class="venue-address">Cd Satélite, León, Gto.</p>
-                <p class="time">💝 5:00 PM 💝</p>
-                <a href="https://maps.app.goo.gl/b8NxpqVRHtE5fv3YA" target="_blank" class="map-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="map-icon">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                    Ver en el mapa
-                </a>
-                <div class="map-embed" data-aos="zoom-in" data-aos-delay="300">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4632.836900037602!2d-101.72776842390228!3d21.1214579805512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bc08c3d2017b1%3A0x53c302100383758!2sSal%C3%B3n%20de%20Fiestas%20Extravaganza!5e1!3m2!1ses-419!2smx!4v1765309397814!5m2!1ses-419!2smx"
-                        width="100%"
-                        height="300"
-                        style="border:0; border-radius: 10px;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+
+                <!-- Recepción -->
+                <div class="detail-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="icon-svg">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Recepción</h3>
+                    <p class="venue-name">Salón Extravaganza</p>
+                    <p class="venue-address">Blvr. Mariano Escobedo Pte. 4821</p>
+                    <p class="venue-address">Cd Satélite, León, Gto.</p>
+                    <p class="time">💝 7:30 PM 💝</p>
+                    <a href="https://maps.app.goo.gl/b8NxpqVRHtE5fv3YA" target="_blank" class="map-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="map-icon">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        Ver en el mapa
+                    </a>
+                    <div class="map-embed" data-aos="zoom-in" data-aos-delay="300">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4632.836900037602!2d-101.72776842390228!3d21.1214579805512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bc08c3d2017b1%3A0x53c302100383758!2sSal%C3%B3n%20de%20Fiestas%20Extravaganza!5e1!3m2!1ses-419!2smx!4v1765309397814!5m2!1ses-419!2smx"
+                            width="100%"
+                            height="300"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
