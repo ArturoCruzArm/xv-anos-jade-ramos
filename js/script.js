@@ -157,27 +157,37 @@ function initMusicPlayer() {
     const playIcon = document.getElementById('playIcon');
     const pauseIcon = document.getElementById('pauseIcon');
 
+    console.log('🎵 Inicializando reproductor de música...');
+    console.log('Botón:', musicToggle);
+    console.log('Audio:', backgroundMusic);
+
     if (!backgroundMusic) {
         // Si no hay audio configurado, ocultar el botón
+        console.warn('⚠️ No se encontró el elemento de audio');
         if (musicToggle) {
             musicToggle.style.display = 'none';
         }
         return;
     }
 
+    console.log('✅ Reproductor de música listo');
+
     let isPlaying = false;
 
     musicToggle.addEventListener('click', function() {
+        console.log('🎵 Click en botón de música. isPlaying:', isPlaying);
         if (isPlaying) {
             backgroundMusic.pause();
             playIcon.classList.remove('hidden');
             pauseIcon.classList.add('hidden');
+            console.log('⏸️ Música pausada');
         } else {
             backgroundMusic.play().catch(error => {
-                console.log('Error playing audio:', error);
+                console.error('❌ Error al reproducir audio:', error);
             });
             playIcon.classList.add('hidden');
             pauseIcon.classList.remove('hidden');
+            console.log('▶️ Música reproduciendo');
         }
         isPlaying = !isPlaying;
     });
@@ -187,6 +197,18 @@ function initMusicPlayer() {
         isPlaying = false;
         playIcon.classList.remove('hidden');
         pauseIcon.classList.add('hidden');
+        console.log('🔚 Audio terminado');
+    });
+
+    // Log cuando el audio se carga correctamente
+    backgroundMusic.addEventListener('canplay', function() {
+        console.log('✅ Audio cargado y listo para reproducir');
+    });
+
+    // Log si hay error al cargar el audio
+    backgroundMusic.addEventListener('error', function(e) {
+        console.error('❌ Error al cargar el audio:', e);
+        console.error('Ruta del audio:', backgroundMusic.querySelector('source').src);
     });
 }
 
