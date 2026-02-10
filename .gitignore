@@ -28,12 +28,10 @@ __pycache__/
 *.swo
 
 # Archivos del proyecto NO para GitHub Pages
-contrato.html
 INFO-EVENTO.txt
 INSTRUCCIONES.txt
 convert_to_webp.py
 clasificar_fotos.py
-selector.html
 selector_fotos/
 
 # Carpetas de respaldo
